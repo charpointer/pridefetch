@@ -58,8 +58,8 @@ def draw_info(flag_name):
             host = gethostname()
             row_info = f'{color}\033[1m{user}@{host}{reset}'
         elif curr_row == 1:
-            distribution = distro.linux_distribution()
-            row_info = f'{row_color}os      {reset}{distribution[0] or "N/A"}'
+            distribution = distro.name()
+            row_info = f'{row_color}os      {reset}{distribution or "N/A"}'
         elif curr_row == 2:
             arch = uname_info.split(' ')[2]
             row_info = f'{row_color}arch    {reset}{arch}'
